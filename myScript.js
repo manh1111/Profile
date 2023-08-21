@@ -88,7 +88,6 @@ displayQuotesSequentially(main.quotes, currentIndex);
 const btnNext = $(".btn-next")
 if (btnNext) {
   btnNext.addEventListener("click", () => { 
-    alert("Bạn đã nhấp vào thẻ div!");
     currentIndex = (currentIndex + 1 + main.quotes.length) % main.quotes.length;
     displayQuotesSequentially(main.quotes, currentIndex);
   })
