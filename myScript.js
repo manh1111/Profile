@@ -65,7 +65,7 @@ function quoteWrap(quote) {
   `;
 }
 
-var currentIndex = 0
+var currentIndex = 0;
 function displayQuotesSequentially(quotesArray, currentIndex) {
   function displayNextQuote() {
     if (currentIndex < quotesArray.length) {
@@ -88,15 +88,18 @@ displayQuotesSequentially(main.quotes, currentIndex);
 const btnNext = $(".btn-next")
 if (btnNext) {
   btnNext.addEventListener("click", () => { 
-    currentIndex = (currentIndex + 1 + main.quotes.length) % main.quotes.length;
-    displayQuotesSequentially(main.quotes, currentIndex);
-  })
+      currentIndex = (currentIndex + 1 + main.quotes.length) % main.quotes.length;
+      displayQuotesSequentially(main.quotes, currentIndex);
+      console.log("Bạn đã nhấp vào thẻ div!");
+    }
+  )
 };
 
 const btnPrev = $(".btn-prev")
 if (btnPrev) {
   btnPrev.addEventListener("click", () => { 
-    currentIndex = (currentIndex - 1 + main.quotes.length) % main.quotes.length;
-    displayQuotesSequentially(main.quotes, currentIndex);
-  })
+      currentIndex = (currentIndex - 1 + main.quotes.length) % main.quotes.length;
+      displayQuotesSequentially(main.quotes, currentIndex);
+    }
+  )
 };
